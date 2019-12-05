@@ -19,4 +19,5 @@
         android:name="com.example.android.navigation.GameFragment"
         android:label="@string/android_trivia"
         tools:layout="@layout/fragment_game" />
+
 </navigation>
