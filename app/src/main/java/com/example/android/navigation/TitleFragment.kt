@@ -1,6 +1,5 @@
 package com.example.android.navigation
 
-
 import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
@@ -17,10 +16,10 @@ class TitleFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(
                 inflater, R.layout.fragment_title, container, false)
 
-        binding.playButton.setOnClickListener(
-                //it.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
-                Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
-        )
+        binding.playButton.setOnClickListener {
+            it.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+            //Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
+        }
 
         setHasOptionsMenu(true)
 
